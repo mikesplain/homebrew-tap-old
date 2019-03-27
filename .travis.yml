@@ -1,0 +1,10 @@
+language: objective-c
+os: osx
+script:
+- brew update
+- cd Formula
+# - for i in *; do brew test-bot $i; done
+- for i in *; do brew install $i; brew uninstall $i; done
+notifications:
+  slack:
+    secure: PE8POXG7EuHEaqa7DizGkWgkALBMA7U25073HgoeuAL5iCWc6m/OvAe3Cbrr86Vp6vdvVO/zm0k5RrI22HHqkfpcoP06bWuz020ChMBiCODatOV8AoimqND+wb/Y87Kbc5E58KQ2t6vxwcwGbFZzpur3NbSxCWkePg7y+wsDdyZeRpDMMuDqunSw014Is1D0q2UhslJqFRjCg6O+IwrUiwTE+nrOCpxsX6M7W8m5OHMsrVO1JT9RG6U8Ac+PKMHFkWaXfefcYo+Yhzih/rDahhouMIRO5HlmOAJG7fGIXdZKKzVw3eqUtiU6FO8z7tGrxVtxvI5pPM5PFNVest59eVhToGwIToiyL6SVcRNgabSOi7JpfZNJ7AhHQYOJaDnWIL/ywcmlBDHD18q8TXHkd4RO2CEh4qUlWbHtsE7EPgV5ccnWxUY3KN88EXolO8KBaRLkw5r6BuOWWsFSXf+QyT7b5Qx1/yqQrbQZ4Tx8za1Qr37avsNe7GVnQgixPJI1eEY/ihDkDSYgmj3WIawe/zf7/AlvaZQCoGRgiudogySppQS9sNk3tQqP1ibyDKhDuqmY2zo1OLk6axU3Zz0Lk7EvXwSfIRA9TCAar7cHBQHU3Q80P8ltijb2VDikoEZpTdP6ET2BJwSpipW2gnE+QzYCqAILTwpYpLBfjnCp+YI=
