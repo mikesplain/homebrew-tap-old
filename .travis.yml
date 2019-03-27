@@ -3,6 +3,7 @@ os: osx
 
 # Install Strap and then test installing packages works.
 script:
+- brew update
 - cd Formula && for i in *; do brew test-bot $i; done
 - cd Formula && for i in *; do brew install $i; brew uninstall $i; done
 
