@@ -2,7 +2,8 @@ language: objective-c
 os: osx
 script:
 - brew update
-- cd Formula && for i in *; do brew test-bot $i; done
+- cd Formula
+# - for i in *; do brew test-bot $i; done
 - for i in *; do brew install $i; brew uninstall $i; done
 notifications:
   slack:
